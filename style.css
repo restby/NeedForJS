@@ -41,6 +41,10 @@ table {
 	border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .hide {
   display: none;
 }
@@ -63,19 +67,25 @@ table {
   background-image: url("image/player.png");
 }
 
+.game {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .gameArea {
   width: 300px;
-  height: 100vh;
+  height: 100%;
   position: relative;
   overflow: hidden;
-  margin: 0 auto;
+  margin: auto;
   background-color: #222;
 }
 
 .line {
   position: absolute;
   width: 10px;
-  height: 50px;
   background-color: #fff;
   left: 145px;
 }
@@ -92,7 +102,6 @@ table {
   color: #fff;
   font-size: 20px;
   background-color: #000;
-  cursor: pointer;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -110,4 +119,21 @@ table {
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.btn {
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.topScore {
+  position: absolute;
+  left: 20px;
+  top: 100px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: red;
+  border: 1px solid #000;
 }
